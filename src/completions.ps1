@@ -2,7 +2,7 @@
 	Register-ArgumentCompleter -Native -CommandName $_ -ScriptBlock {
 		param($wordToComplete, $commandAst, $cursorPosition)
 
-		. (Join-Path $PSScriptRoot .\commands.ps1)
+		. $PSScriptRoot\commands.ps1
 		$cmds |
 			Where-Object { $_ -like "$wordToComplete*" } |
 			Sort-Object |

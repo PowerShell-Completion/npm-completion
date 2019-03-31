@@ -15,6 +15,7 @@ docs
 doctor
 edit
 explore
+get
 help-search
 help
 hook
@@ -41,6 +42,7 @@ restart
 root
 run-script
 search
+set
 shrinkwrap
 star
 stars

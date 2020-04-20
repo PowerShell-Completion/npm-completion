@@ -41,6 +41,7 @@ $cmds = @(
 	'repo',
 	'restart',
 	'root',
+	'run',
 	'run-script',
 	'search',
 	'set',

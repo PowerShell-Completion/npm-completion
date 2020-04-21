@@ -37,7 +37,7 @@
 			return @();
 		}
 
-		if ($commandAst -match "npm(.cmd)?\s+run(-script)?\s") {
+		if ($commandAst.ToString() -match "npm(.cmd)?\s+run(-script)?\s*") {
 			$allScripts = Get-PackageJsonPath | Get-PackageJsonScripts -scriptFilter "$wordToComplete*"
 			$result=$allScripts | ForEach-Object {
 				# item1 is the script name, item2 is the script text (passed as tooltip)

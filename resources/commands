@@ -15,6 +15,7 @@ docs
 doctor
 edit
 explore
+fund
 get
 help-search
 help
@@ -40,6 +41,7 @@ rebuild
 repo
 restart
 root
+run
 run-script
 search
 set
@@ -53,6 +55,7 @@ test
 token
 uninstall
 unpublish
+unstar
 update
 version
 view

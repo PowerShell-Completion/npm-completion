@@ -1,74 +1,12 @@
-using module '..\lib\classes\CommandInfo.psm1'
+using module 'src/lib/classes/CommandInfo.psm1'
 
-Set-Variable -Name COMMANDS -Option Constant -Value @(
-	'access',
-	'adduser',
-	'audit',
-	'bin',
-	'bugs',
-	'build',
-	'cache',
-	'ci',
-	'completion',
-	'config',
-	'dedupe',
-	'deprecate',
-	'dist-tag',
-	'docs',
-	'doctor',
-	'edit',
-	'explore',
-	'fund',
-	'get',
-	'help',
-	'help-search',
-	'hook',
-	'init',
-	'install',
-	'install-ci-test',
-	'install-test',
-	'link',
-	'logout',
-	'ls',
-	'npm',
-	'org',
-	'outdated',
-	'owner',
-	'pack',
-	'ping',
-	'prefix',
-	'profile',
-	'prune',
-	'publish',
-	'rebuild',
-	'repo',
-	'restart',
-	'root',
-	'run',
-	'run-script',
-	'search',
-	'set',
-	'shrinkwrap',
-	'star',
-	'stars',
-	'start',
-	'stop',
-	'team',
-	'test',
-	'token',
-	'uninstall',
-	'unpublish',
-	'unstar',
-	'update',
-	'version',
-	'view',
-	'whoami'
-)
+# Define commands
+Set-Variable -Name COMMANDS -Option Constant -Value ([ordered] @{})
 
-Set-Variable -Name COMMAND_DATA -Option Constant -Value ([ordered] @{})
-
-$COMMANDS | ForEach-Object {
-	$COMMAND_DATA[$_] = [CommandInfo] @{
-		Name = $_
-	}
+# Assemble all commands
+$commandFiles = Get-ChildItem $PSScriptRoot | Where-Object {
+	return ($_.Name -ne '__.ps1') -and ($_.Name -like '*.ps1')
+}
+$commandFiles | ForEach-Object {
+	. $_.FullName
 }

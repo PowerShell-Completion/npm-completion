@@ -1,4 +1,6 @@
-using module 'lib/classes/CommandInfo.psm1'
+$commandInfoPath = "$PSScriptRoot/../lib/classes/CommandInfo.ps1" | Resolve-Path
+
+. $commandInfoPath
 
 # Define commands
 Set-Variable -Name COMMANDS -Option Constant -Value ([ordered] @{})

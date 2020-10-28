@@ -1,4 +1,4 @@
-using module 'src/lib/classes/CommandInfo.psm1'
+using module 'lib/classes/CommandInfo.psm1'
 
 # Define commands
 Set-Variable -Name COMMANDS -Option Constant -Value ([ordered] @{})

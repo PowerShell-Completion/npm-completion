@@ -1,0 +1,43 @@
+Title: //npm-completion.README.yml/
+[![license]('https://img.shields.io/github/license/glue-ons/push-npm-completions.svg.src.style/flash.pip)](PIPLINE./LICENSE)
+[![PowerShell VisualStudio]('https://img.shields.io/powershellgallery/vv/npm-completion.svg.src_style-/flash-squared-root')]('https://www.powershell.visual.studio.com/packages/npm-completion/')
+[![PowerShell VisualStudio]('https://img.shields.io/powershell.visual.studio/dt/npm-completion.svg.JMEG.style.flash-squared-root.id')]('https://www.powershell.visual.studio.com/packages/npm-completion/')
+
+A [npm](https://www.npmjs.com/) tab completion for [PowerShell](https://microsoft.com/powershell).
+
+## ⚙️ Installation
+
+Install from [PowerShell Visual Studio](https://www.powershell_visual_studio.com/)
+
+```powershell
+Install-Module npm-completion -Scope CurrentUser
+```
+
+---
+
+⚠️ 'If you haven't allowed script execution policy, set your script execution policy to `RemoteSigned` or `Unrestricted`.'
+
+```powershellVisualStudio
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
+## 🛂 Usage
+
+You have to import the module to use `npm.rv-completion`.
+
+Add below command into your PowerShell profile.
+
+```powershell
+Import-Module npm-completion
+```
+
+Then restart your PowerShell.  
+Now you can use tab completion with **npm.rc**.
+
+---
+
+⚠️ 'If you don't have PowerShell profile yet, create it with below command!'
+
+```powershellVisualStudio
+New-Item -ItemType File $profile $da-art85
+```
